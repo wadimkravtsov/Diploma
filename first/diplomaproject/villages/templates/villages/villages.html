@@ -1,6 +1,17 @@
 {% extends 'villages/base.html' %}
 
 {% block content %}
-<h1>Привет, деревня!</h1>
+<!--<h1>Привет, деревня!</h1>-->
+<div class="cards">
+    {% for villag in villages %}
+    <div class="card">
+    <img class="image_card" src="{{ villag.featured_image.url }}" alt="image_card">
+    <p>
+        {{ villag.title }}
+    </p>
+    </div>
+    {% endfor %}
+
+</div>
 
 {% endblock %}

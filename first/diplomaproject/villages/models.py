@@ -6,7 +6,7 @@ class Village(models.Model):
     title = models.CharField(max_length=100)
     description = models.TextField()
     featured_image = models.ImageField(upload_to="villages", blank=True, default="default.jpg")
-    direction = models.IntegerField(default=0)
+    direction = models.CharField(max_length=100)
     distance = models.IntegerField(default=0)
     quantity = models.IntegerField(default=0)
     square = models.IntegerField(default=0)
