@@ -1,6 +1,22 @@
 {% extends 'villages/base.html' %}
 
 {% block content %}
-<h1>Привет, коллеги!</h1>
+<h1>Агентства недвижимости</h1>
+
+<div class="cards">
+    {% for realtor in realtors %}
+    <div class="card">
+    <img class="image_card" src="{{ realtor.featured_image.url }}" alt="image_card">
+    <h2>
+        {{ realtor.title }}
+    </h2>
+    <p>{{ realtor.office_adress }}</p>
+    <p>Тел: {{ realtor.contacts }}</p>
+    <p>Whatsapp: {{ realtor.whatsapp }}</p>
+    <p>Telegram: {{ realtor.telegram }}</p>
+    </div>
+    {% endfor %}
+
+</div>
 
 {% endblock %}

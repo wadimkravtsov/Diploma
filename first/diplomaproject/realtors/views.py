@@ -1,4 +1,10 @@
 from django.shortcuts import render
+from realtors.models import Realtor
+
 
 def realtors(request):
-    return render(request, 'realtors/realtors.html')
+    rl = Realtor.objects.all()
+    context = {
+        "realtors": rl
+    }
+    return render(request, 'realtors/realtors.html', context)

@@ -9,6 +9,8 @@ class Realtor(models.Model):
     experience = models.IntegerField(default=0)
     contacts = models.CharField(max_length=200, blank=True)
     website = models.CharField(max_length=400, blank=True)
+    whatsapp = models.CharField(max_length=100, blank=True)
+    telegram = models.CharField(max_length=100, blank=True)
     villages = models.ManyToManyField(Village, blank=True)
 
 
