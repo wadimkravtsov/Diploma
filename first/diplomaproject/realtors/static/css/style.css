@@ -65,11 +65,70 @@ a{
     justify-content: space-evenly;
     gap: 50px;
 }
+
+.cards1{
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+}
+
+.cards_one{
+    padding: 0 50px;
+    display: flex;
+}
+
 .card{
-    border: 3px solid orange;
+    padding: 15px;
+    border: 3px solid black;
     border-radius: 10px;
     background-color: rgb(175, 175, 143);
     box-sizing: border-box;
+}
+
+.card1{
+    width: 425px;
+    height: 500px;
+    padding: 10px;
+    border: 3px solid black;
+    border-radius: 10px;
+    background-color: rgb(175, 175, 143);
+    box-sizing: border-box;
+    
+}
+.image_card_one{
+    width: 700px;
+    /* float: left; */
+    margin-right: 20px;
+
+}
+
+.right p{
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.info{
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-around; */
+    gap: 20px;
+    box-sizing: border-box;
+}
+
+.info h3{
+    display: block;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: rgb(192, 192, 155)
+    
+}
+.description{
+    display: block;
+    margin: 20px;
 }
 .card h2{
     margin-left: 20px;

@@ -7,3 +7,7 @@ def villages(request):
         "villages": vg
     }
     return render(request, 'villages/villages.html', context)
+
+def village(request, pk):
+    village.obj = Village.objects.get(id=pk)
+    return render(request, 'villages/one_village.html', {'village': village.obj})

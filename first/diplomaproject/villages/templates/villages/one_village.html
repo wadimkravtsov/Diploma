@@ -1,0 +1,26 @@
+{% extends 'villages/base.html' %}
+
+{% block content %}
+<h1>{{ village.title }}</h1>
+<div class="cards_one">
+    <div class="left">
+    <img class="image_card_one" src="{{ village.featured_image.url }}" alt="image_card">
+    </div>
+    <div class="right">
+        <p>Направление:<br>{{ village.direction }} - {{ village.distance }} км</p>
+        <p>Количество домовладений: {{ village.quantity }}</p>
+        <p>Площадь поселка: {{ village.square }} га</p>
+        <p>Средняя цена земли: {{ village.land_price }} тыс.руб за сотку</p>
+        <p>Контакты: {{ village.contacts }}</p>
+        <p>Web-site: {{ village.website }}</p>
+        <div class="info">
+            {% for info in village.infrastructures.all %}
+                <h3>{{ info }}</h3>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+<div class="description">
+<p>{{ village.description }}</p>
+</div>
+{% endblock %}

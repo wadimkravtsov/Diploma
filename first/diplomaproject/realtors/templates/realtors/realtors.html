@@ -3,9 +3,9 @@
 {% block content %}
 <h1>Агентства недвижимости</h1>
 
-<div class="cards">
+<div class="cards1">
     {% for realtor in realtors %}
-    <div class="card">
+    <div class="card1">
     <img class="image_card" src="{{ realtor.featured_image.url }}" alt="image_card">
     <h2>
         {{ realtor.title }}

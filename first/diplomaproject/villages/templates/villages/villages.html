@@ -5,11 +5,13 @@
 <div class="cards">
     {% for villag in villages %}
     <div class="card">
-    <img class="image_card" src="{{ villag.featured_image.url }}" alt="image_card">
-    <h2>
-        {{ villag.title }}
-    </h2>
-    <p>Направление:<br>{{ villag.direction }} - {{ villag.distance }} км</p>
+         <a href="{% url 'village' villag.id %}" class="village">
+            <img class="image_card" src="{{ villag.featured_image.url }}" alt="image_card">
+            <h2>
+            {{ villag.title }}
+            </h2>
+            <p>Направление:<br>{{ villag.direction }} - {{ villag.distance }} км</p>
+         </a>
     </div>
     {% endfor %}
 
