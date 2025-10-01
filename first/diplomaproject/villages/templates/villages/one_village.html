@@ -13,9 +13,12 @@
         <p>Средняя цена земли: {{ village.land_price }} тыс.руб за сотку</p>
         <p>Контакты: {{ village.contacts }}</p>
         <p>Web-site: {{ village.website }}</p>
+        <span>В поселке:</span>
         <div class="info">
             {% for info in village.infrastructures.all %}
+            <a href="{% url 'villages' %}">
                 <h3>{{ info }}</h3>
+            </a>
             {% endfor %}
         </div>
     </div>

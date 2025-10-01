@@ -22,9 +22,10 @@ h1{
     font-size: 40px;
     color: brown;
 }
-h2{
+h2{    
     color: white;
 }
+
 .wrap{
     max-width: 1200px;
     margin: 0 auto;
@@ -78,7 +79,31 @@ a{
 .cards_one{
     padding: 0 50px;
     display: flex;
+    border-right: 10px double black;
     background-color: rgb(201, 223, 223);
+}
+
+.cards_one_left{
+    width: 15%;
+    padding: 10px;
+    border-right: 10px double black;
+    border-left: 10px double black;
+    background-color: rgb(235, 240, 240);
+     
+}
+
+.cards_one_left h2{
+    margin-bottom: 40px;
+    text-align: center;
+    color: brown;
+    font-size: 25px;
+}
+
+
+
+.cards_one_right{
+    padding: 0 50px;
+    display: flex;
 }
 
 .card{
@@ -101,6 +126,7 @@ a{
 }
 .image_card_one{
     width: 700px;
+    border: 4px solid black;
     /* float: left; */
     margin-right: 20px;
 
@@ -138,6 +164,7 @@ a{
 .description{
     display: block;
     margin: 20px;
+    background-color:rgb(233, 231, 228);
     font-size: 18px;    
     font-weight: bold;
 

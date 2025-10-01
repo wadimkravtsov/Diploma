@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="titl">
+        <h1>Где в Барнауле жить хорошо?</h1>
+        <h2>Коттеджные поселки - вторичный рынок</h2>
+    </div>
+    <div class="menu">
+      <div class="wrap">
+          <ul>
+            <li><a href="{% url 'villages' %}">Поселки</a></li>
+            <li><a href="{% url 'realtors' %}">Риэлторы</a></li>
+            <li><a href="">Поселки +</a></li>
+            <li><a href="">Риэлторы +</a></li>
+            <li><a href="">Отзывы</a></li>
+            <li><a href="">Зарегистрироваться</a></li>
+
+          </ul>
+      </div>
+    </div>
+        {% block content %}
+        {% endblock %}
+</body>
+</html>
