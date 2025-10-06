@@ -1,0 +1,76 @@
+{% extends 'villages/base.html' %}
+
+{% block content %}
+<img class="image_card" src="{{ realtor.featured_image.url }}" alt="image_card">
+<h1>{{ realtor.title }} (price)</h1>
+<div class="tab">
+<table>
+    <thead>
+    <tr>
+        <th>Поселок</th>
+        <th>адрес</th>
+        <th>площадь участка</th>
+        <th>площадь дома</th>
+        <th>этажность</th>
+        <th>материал стен</th>
+        <th>описание</th>
+        <th>цена</th>
+        <th>контакты</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>...</td>
+        <td>...</td>
+        <td>...</td>
+        <td>...</td>
+        <td>...</td>
+        <td>...</td>
+        <td>...</td>
+        <td>...</td>
+        <td>...</td>
+    </tr>
+    <tr>
+        <td>...</td>
+        <td>...</td>
+        <td>...</td>
+        <td>...</td>
+        <td>...</td>
+        <td>...</td>
+        <td>...</td>
+        <td>...</td>
+        <td>...</td>
+    </tr>
+    <tr>
+        <td>...</td>
+        <td>...</td>
+        <td>...</td>
+        <td>...</td>
+        <td>...</td>
+        <td>...</td>
+        <td>...</td>
+        <td>...</td>
+        <td>...</td>
+    </tr>
+    <tr>
+        <td>...</td>
+        <td>...</td>
+        <td>...</td>
+        <td>...</td>
+        <td>...</td>
+        <td>...</td>
+        <td>...</td>
+        <td>...</td>
+        <td>...</td>
+    </tr>
+    </tbody>
+</table>
+    <div class="realtor-contact">
+        <p>{{ realtor.office_adress }}</p>
+        <p>Тел: {{ realtor.contacts }}</p>
+        <p>Whatsapp: {{ realtor.whatsapp }}</p>
+        <p>Telegram: {{ realtor.telegram }}</p>
+    </div>
+
+</div>
+{% endblock %}

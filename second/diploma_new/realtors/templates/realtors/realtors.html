@@ -6,14 +6,16 @@
 <div class="cards1">
     {% for realtor in realtors %}
     <div class="card1">
-    <img class="image_card" src="{{ realtor.featured_image.url }}" alt="image_card">
-    <h2>
-        {{ realtor.title }}
-    </h2>
-    <p>{{ realtor.office_adress }}</p>
-    <p>Тел: {{ realtor.contacts }}</p>
-    <p>Whatsapp: {{ realtor.whatsapp }}</p>
-    <p>Telegram: {{ realtor.telegram }}</p>
+    <a href="{% url 'realtor' realtor.id %}" class="realtor">
+        <img class="image_card" src="{{ realtor.featured_image.url }}" alt="image_card">
+        <h2>
+            {{ realtor.title }}
+        </h2>
+        <p>{{ realtor.office_adress }}</p>
+        <p>Тел: {{ realtor.contacts }}</p>
+        <p>Whatsapp: {{ realtor.whatsapp }}</p>
+        <p>Telegram: {{ realtor.telegram }}</p>
+    </a>
     </div>
     {% endfor %}
 

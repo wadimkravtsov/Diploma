@@ -8,3 +8,8 @@ def realtors(request):
         "realtors": rl
     }
     return render(request, 'realtors/realtors.html', context)
+
+def realtor(request, pk):
+    realtor.obj = Realtor.objects.get(id=pk)
+    return render(request, 'realtors/one_realtor.html', {'realtor': realtor.obj})
+

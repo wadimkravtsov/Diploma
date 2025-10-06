@@ -3,5 +3,6 @@ from . import views
 
 urlpatterns = [
     path('', views.realtors, name="realtors"),
+    path('realtor/<str:pk>/', views.realtor, name="realtor"),
 
 ]

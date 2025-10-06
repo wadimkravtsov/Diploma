@@ -4,10 +4,10 @@
 <h1>{{ village.title }}</h1>
 <div class="cards_one">
     <div class="cards_one_left">
-        <h2>Они здесь продают:</h2>
+        <h2>Здесь продают:</h2>
             <div class="realt">
                 {% for realt in village.realtors.all %}
-                <a href="{% url 'realtors' %}">
+                <a href="{% url 'realtor' realt.id %}">
                     <h3>{{ realt.title }}</h3>
                 </a>
                 {% endfor %}
