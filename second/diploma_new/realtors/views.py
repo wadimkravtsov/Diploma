@@ -1,5 +1,6 @@
 from django.shortcuts import render
-from realtors.models import Realtor
+from realtors.models import Realtor, Cottage
+
 
 
 def realtors(request):
@@ -11,5 +12,11 @@ def realtors(request):
 
 def realtor(request, pk):
     realtor.obj = Realtor.objects.get(id=pk)
-    return render(request, 'realtors/one_realtor.html', {'realtor': realtor.obj})
+    cottages = Cottage.objects.filter(rlt=pk)
+    context = {
+        'realtor': realtor.obj,
+        'cottages': cottages
+    }
+    print(cottages, pk)
+    return render(request, 'realtors/one_realtor.html', context)
 

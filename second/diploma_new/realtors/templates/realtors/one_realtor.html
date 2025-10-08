@@ -19,51 +19,55 @@
 
     </tr>
     </thead>
+
     <tbody>
+    {% for cottage in cottages %}
     <tr>
-        <td>...</td>
-        <td>...</td>
-        <td>...</td>
-        <td>...</td>
-        <td>...</td>
-        <td>...</td>
-        <td>...</td>
-        <td>...</td>
-        <td>...</td>
+        <td>{{ cottage.village }}</td>
+        <td>{{ cottage.adress }}</td>
+        <td>{{ cottage.land_area }}</td>
+        <td>{{ cottage.house_area }}</td>
+        <td>{{ cottage.floors }}</td>
+        <td>{{ cottage.walls }}</td>
+        <td>{{ cottage.bedrooms }}</td>
+        <td>{{ cottage.web_site }}</td>
+        <td>{{ cottage.price }}</td>
     </tr>
-    <tr>
-        <td>...</td>
-        <td>...</td>
-        <td>...</td>
-        <td>...</td>
-        <td>...</td>
-        <td>...</td>
-        <td>...</td>
-        <td>...</td>
-        <td>...</td>
-    </tr>
-    <tr>
-        <td>...</td>
-        <td>...</td>
-        <td>...</td>
-        <td>...</td>
-        <td>...</td>
-        <td>...</td>
-        <td>...</td>
-        <td>...</td>
-        <td>...</td>
-    </tr>
-    <tr>
-        <td>...</td>
-        <td>...</td>
-        <td>...</td>
-        <td>...</td>
-        <td>...</td>
-        <td>...</td>
-        <td>...</td>
-        <td>...</td>
-        <td>...</td>
-    </tr>
+    {% endfor %}
+
+<!--    <tr>-->
+<!--        <td>...</td>-->
+<!--        <td>...</td>-->
+<!--        <td>...</td>-->
+<!--        <td>...</td>-->
+<!--        <td>...</td>-->
+<!--        <td>...</td>-->
+<!--        <td>...</td>-->
+<!--        <td>...</td>-->
+<!--        <td>...</td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--        <td>...</td>-->
+<!--        <td>...</td>-->
+<!--        <td>...</td>-->
+<!--        <td>...</td>-->
+<!--        <td>...</td>-->
+<!--        <td>...</td>-->
+<!--        <td>...</td>-->
+<!--        <td>...</td>-->
+<!--        <td>...</td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--        <td>...</td>-->
+<!--        <td>...</td>-->
+<!--        <td>...</td>-->
+<!--        <td>...</td>-->
+<!--        <td>...</td>-->
+<!--        <td>...</td>-->
+<!--        <td>...</td>-->
+<!--        <td>...</td>-->
+<!--        <td>...</td>-->
+<!--    </tr>-->
     </tbody>
 </table>
     <div class="realtor-contact">
