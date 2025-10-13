@@ -1,0 +1,17 @@
+{% extends 'villages/base.html' %}
+
+{% block content %}
+<h1>Заполните форму</h1>
+
+<form class="form" method="post">
+    {% csrf_token %}
+    {% for field in form %}
+    <div class="form__field">
+        <label for="formInput#text">{{ field.label }}: </label>
+            {{ field }}
+    </div>
+    {% endfor %}
+    <input class="cottage-input" type="submit" value="Ввод">
+</form>
+
+{% endblock %}

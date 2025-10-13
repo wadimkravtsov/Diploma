@@ -1,5 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from realtors.models import Realtor, Cottage
+from .forms import CottageForm
 
 
 
@@ -19,4 +20,17 @@ def realtor(request, pk):
     }
     print(cottages, pk)
     return render(request, 'realtors/one_realtor.html', context)
+
+def create_cottage(request):
+    form = CottageForm()
+
+    if request.method == "POST":
+        form = CottageForm(request.POST)
+        print(form)
+        if form.is_valid():
+            form.save()
+            return redirect('realtors')
+
+    context = {'form': form}
+    return render(request, 'realtors/form-cottage.html', context)
 
