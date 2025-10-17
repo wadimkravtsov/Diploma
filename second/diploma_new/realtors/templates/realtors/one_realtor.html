@@ -16,7 +16,8 @@
         <th>количество спален</th>
         <th>Web-site</th>
         <th>цена</th>
-
+        <th></th>
+        <th></th>
     </tr>
     </thead>
 
@@ -32,6 +33,13 @@
         <td>{{ cottage.bedrooms }}</td>
         <td>{{ cottage.web_site }}</td>
         <td>{{ cottage.price }}</td>
+        <td>
+<!--            Редактировать-->
+            <a href="{% url 'update_cottage' cottage.id %}">Редактировать</a>
+        </td>
+        <td>
+            <a href="{% url 'delete_cottage' cottage.id %}">Удалить</a>
+        </td>
     </tr>
     {% endfor %}
 

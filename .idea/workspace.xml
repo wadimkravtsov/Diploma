@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6d33adf3-aae2-494a-8497-58ab826c046b" name="Changes" comment="" />
+    <list default="true" id="6d33adf3-aae2-494a-8497-58ab826c046b" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/second/diploma_new/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/second/diploma_new/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/second/diploma_new/realtors/templates/realtors/one_realtor.html" beforeDir="false" afterPath="$PROJECT_DIR$/second/diploma_new/realtors/templates/realtors/one_realtor.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/second/diploma_new/realtors/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/second/diploma_new/realtors/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/second/diploma_new/realtors/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/second/diploma_new/realtors/views.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,6 +19,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Python Script" />
         <option value="HTML File" />
       </list>
     </option>
@@ -35,7 +42,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Dev/Diploma",
+    "last_opened_file_path": "C:/Dev/Python417",
     "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
 }]]></component>
@@ -66,5 +73,15 @@
       <updated>1756731332983</updated>
     </task>
     <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/second/diploma_new/villages/admin.py</url>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
