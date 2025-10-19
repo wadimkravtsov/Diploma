@@ -26,7 +26,7 @@ def create_cottage(request):
 
     if request.method == "POST":
         form = CottageForm(request.POST)
-        print(form)
+        print(form.fields)
         if form.is_valid():
             form.save()
             return redirect('realtors')
@@ -43,7 +43,7 @@ def update_cottage(request,pk):
         print(form)
         if form.is_valid():
             form.save()
-            return redirect('realtors')
+            return redirect('realtor', pk=cottage.rlt.id)
 
     context = {'form': form,
                'cottage': cottage}
@@ -54,9 +54,9 @@ def delete_cottage(request, pk):
 
     # if request.method == "POST":
     cottage.delete()
-    return redirect('realtor', pk=cottage.rlt)
+    return redirect('realtor', pk=cottage.rlt.id)
 
     # context = {'object': cottage}
-    # return render(request, 'projects/delete.html', context)
+    # return render(request, 'realtors/form-cottage.html', context)
 
 

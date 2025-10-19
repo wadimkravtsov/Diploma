@@ -6,9 +6,9 @@
     <div class="cards_one_left">
         <h2>Здесь продают:</h2>
             <div class="realt">
-                {% for realt in village.realtors.all %}
-                <a href="{% url 'realtor' realt.id %}">
-                    <h3>{{ realt.title }}</h3>
+                {% for realt in cottages %}
+                <a href="{% url 'realtor' realt.rlt.id %}">
+                    <h3>{{ realt.rlt.title }}</h3>
                 </a>
                 {% endfor %}
             </div>

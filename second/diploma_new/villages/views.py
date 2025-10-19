@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from .models import Village
+from realtors.models import Cottage
+
 
 def villages(request):
     vg = Village.objects.all()
@@ -10,4 +12,6 @@ def villages(request):
 
 def village(request, pk):
     village.obj = Village.objects.get(id=pk)
-    return render(request, 'villages/one_village.html', {'village': village.obj})
+    cottages = Cottage.objects.filter(village=village.obj.title)
+    print(cottages)
+    return render(request, 'villages/one_village.html', {'village': village.obj, 'cottages': cottages})
