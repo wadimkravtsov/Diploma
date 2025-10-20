@@ -5,9 +5,14 @@ from .forms import CottageForm
 
 
 def realtors(request):
-    rl = Realtor.objects.all()
+    search_realtor = ""
+    if request.GET.get('search_realtor'):
+        search_realtor = request.GET.get('search_realtor')
+
+    rl = Realtor.objects.filter(title__icontains=search_realtor)
     context = {
-        "realtors": rl
+        "realtors": rl,
+        "search_realtor": search_realtor
     }
     return render(request, 'realtors/realtors.html', context)
 
@@ -29,7 +34,7 @@ def create_cottage(request):
         print(form.fields)
         if form.is_valid():
             form.save()
-            return redirect('realtors')
+            return redirect('realtors', pk=form.rlt.id)
 
     context = {'form': form}
     return render(request, 'realtors/form-cottage.html', context)

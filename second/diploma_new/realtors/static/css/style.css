@@ -215,9 +215,7 @@ th, td{
 
 }
 
-/* form{
-    margin: 0 auto;
-} */
+/* Форма для создания нового коттеджа */
 
 .form__field{
     display: block;
@@ -261,3 +259,42 @@ input{
     background-color: rgb(219, 231, 219);
 
 }
+
+/* К формам поиска коттеджей и риэлторов */
+
+.form1{
+    display: inline-block;
+    display: flex;
+    margin-left: -190px; 
+}
+
+.form__field1{    
+    text-align: start;
+}
+
+.btn_search_village{
+    background-color: yellow;
+    width: 100px;
+    margin-left: 5px;
+    font-weight: bold;
+}
+
+.btn_search_village:hover{
+    background-color:rgb(136, 230, 136);
+
+}
+
+.btn_search_realtor{
+    background-color: yellow;
+    width: 100px;
+    margin-left: 5px;
+    font-weight: bold;
+}
+
+.btn_search_realtor:hover{
+    background-color:rgb(136, 230, 136);
+
+}
+
+
+

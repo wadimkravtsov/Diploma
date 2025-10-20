@@ -7,9 +7,11 @@
     <list default="true" id="6d33adf3-aae2-494a-8497-58ab826c046b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/second/diploma_new/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/second/diploma_new/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/second/diploma_new/realtors/templates/realtors/one_realtor.html" beforeDir="false" afterPath="$PROJECT_DIR$/second/diploma_new/realtors/templates/realtors/one_realtor.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/second/diploma_new/realtors/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/second/diploma_new/realtors/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/second/diploma_new/realtors/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/second/diploma_new/realtors/static/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/second/diploma_new/realtors/templates/realtors/realtors.html" beforeDir="false" afterPath="$PROJECT_DIR$/second/diploma_new/realtors/templates/realtors/realtors.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/second/diploma_new/realtors/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/second/diploma_new/realtors/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/second/diploma_new/villages/templates/villages/villages.html" beforeDir="false" afterPath="$PROJECT_DIR$/second/diploma_new/villages/templates/villages/villages.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/second/diploma_new/villages/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/second/diploma_new/villages/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +44,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Dev/Python417",
+    "last_opened_file_path": "C:/Dev/Diploma",
     "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
 }]]></component>

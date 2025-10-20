@@ -1,6 +1,15 @@
 {% extends 'villages/base.html' %}
 
 {% block content %}
+<h1>Посёлки</h1>
+          <form  class="form1" action="{% url 'villages' %}" method="get">
+            <div class="form__field1">
+              <input class="search_village"  type="text" name="search_village"
+                placeholder="Поиск по названию" value="{{ search_village }}"/>
+            </div>
+
+            <input class="btn_search_village" type="submit" value="Поиск" />
+          </form>
 
 <div class="cards">
     {% for villag in villages %}

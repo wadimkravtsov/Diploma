@@ -2,6 +2,14 @@
 
 {% block content %}
 <h1>Агентства недвижимости</h1>
+          <form  class="form1" action="{% url 'realtors' %}" method="get">
+            <div class="form__field1">
+              <input class="search_realtor"  type="text" name="search_realtor"
+                placeholder="Поиск по названию" value="{{ search_realtor }}"/>
+            </div>
+
+            <input class="btn_search_realtor" type="submit" value="Поиск" />
+          </form>
 
 <div class="cards1">
     {% for realtor in realtors %}
