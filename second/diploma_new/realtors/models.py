@@ -15,10 +15,11 @@ class Realtor(models.Model):
     telegram = models.CharField(max_length=100, blank=True)
     # villages = models.ManyToManyField(Village, blank=True)
 
-
-
     def __str__(self):
         return self.title
+
+    class Meta:
+        ordering = ['title']
 
 class Cottage(models.Model):
     rlt = models.ForeignKey(Realtor, on_delete=models.CASCADE)

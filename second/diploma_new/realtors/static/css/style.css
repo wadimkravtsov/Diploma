@@ -296,5 +296,53 @@ input{
 
 }
 
+/* Пагинация */
+
+.pagin{
+    width: 100%;
+    margin-top: 70px;
+}    
+
+.pagin ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.pagin li{
+    display: block;
+    width: 70px;
+    height: 50px;
+    padding: 10px;
+    text-align: center;    
+    border: 3px solid black;
+    border-radius: 10px;
+    box-sizing: border-box;
+
+}
+
+.pbtn{
+    display: block;
+    padding: 0;
+    font-size: 22px;
+    font-weight: bold;
+    align-items: center;
+    
+}
+
+.pbtn-active{
+    display: block;
+    padding: 0;
+    font-size: 22px;
+    font-weight: bold;
+    align-items: center;
+    background-color: rgb(175, 175, 143);
+    
+}
+
+
+
+
 
 
