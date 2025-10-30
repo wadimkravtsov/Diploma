@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from realtors.models import Realtor, Cottage
 from .forms import CottageForm
+from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 
 
 
@@ -10,9 +11,35 @@ def realtors(request):
         search_realtor = request.GET.get('search_realtor')
 
     rl = Realtor.objects.filter(title__icontains=search_realtor)
+
+    page = request.GET.get('page')
+    result = 3
+    paginator = Paginator(rl, result)
+
+    try:
+        rl = paginator.page(page)  # http://127.0.0.1:8000/projects/?page=2
+    except PageNotAnInteger:
+        page = 1
+        rl = paginator.page(page)  # http://127.0.0.1:8000/projects/?page=fgdfgdfg
+    except EmptyPage:
+        page = paginator.num_pages
+        rl = paginator.page(page)
+
+    left_number = int(page) - 2
+    if left_number < 1:
+        left_number = 1
+
+    right_number = int(page) + 3
+    if right_number > paginator.num_pages:
+        right_number = paginator.num_pages + 1
+
+    pages_range = range(left_number, right_number)
+
     context = {
         "realtors": rl,
-        "search_realtor": search_realtor
+        "search_realtor": search_realtor,
+        "paginator": paginator,
+        "pages_range": pages_range
     }
     return render(request, 'realtors/realtors.html', context)
 
@@ -34,7 +61,7 @@ def create_cottage(request):
         print(form.fields)
         if form.is_valid():
             form.save()
-            return redirect('realtors', pk=form.rlt.id)
+            return redirect('realtors')
 
     context = {'form': form}
     return render(request, 'realtors/form-cottage.html', context)
