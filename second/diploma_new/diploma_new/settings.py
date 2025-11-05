@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'realtors.apps.RealtorsConfig',
     'villages.apps.VillagesConfig',
+    'users.apps.UsersConfig',
 ]
 
 MIDDLEWARE = [
