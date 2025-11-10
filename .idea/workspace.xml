@@ -7,8 +7,9 @@
     <list default="true" id="6d33adf3-aae2-494a-8497-58ab826c046b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/second/diploma_new/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/second/diploma_new/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/second/diploma_new/diploma_new/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/second/diploma_new/diploma_new/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/second/diploma_new/realtors/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/second/diploma_new/realtors/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/second/diploma_new/realtors/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/second/diploma_new/realtors/static/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/second/diploma_new/realtors/templates/realtors/one_realtor.html" beforeDir="false" afterPath="$PROJECT_DIR$/second/diploma_new/realtors/templates/realtors/one_realtor.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/second/diploma_new/villages/templates/villages/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/second/diploma_new/villages/templates/villages/base.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,6 +73,17 @@
       <updated>1756731332983</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

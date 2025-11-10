@@ -195,6 +195,9 @@ a:hover{
 /* .tab{
     margin: 0 auto;
 } */
+
+/* Прайс-лист */
+
 table{
     margin: 0 auto;
     border-collapse: collapse;
@@ -208,6 +211,16 @@ th, td{
     border: 2px solid black
     
     
+}
+
+.btn-up{
+    border: 2px solid black;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-left: 1560px;
+    padding: 10px;
+    box-sizing: border-box;
 }
 .realtor-contact{
     margin: 50px;

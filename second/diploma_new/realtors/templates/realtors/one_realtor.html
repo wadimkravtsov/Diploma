@@ -3,6 +3,7 @@
 {% block content %}
 <img class="image_card" src="{{ realtor.featured_image.url }}" alt="image_card">
 <h1>{{ realtor.title }} (price)</h1>
+<button class="btn-up"><a href="{% url 'cottage' %}">добавить объект</a></button>
 <div class="tab">
 <table>
     <thead>
