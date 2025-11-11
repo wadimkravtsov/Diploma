@@ -1,5 +1,6 @@
 from django.db.models.expressions import result
 from django.shortcuts import render
+from django.contrib.auth.models import User
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 from django.template.defaultfilters import title
 
