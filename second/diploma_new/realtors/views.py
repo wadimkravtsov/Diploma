@@ -58,10 +58,12 @@ def create_cottage(request):
 
     if request.method == "POST":
         form = CottageForm(request.POST)
-        print(form.fields)
+        rt = request.POST['rlt']
+        # print(form.fields)
+        # print(rt)
         if form.is_valid():
             form.save()
-            return redirect('realtors')
+            return redirect('realtor', pk=rt)
 
     context = {'form': form}
     return render(request, 'realtors/form-cottage.html', context)

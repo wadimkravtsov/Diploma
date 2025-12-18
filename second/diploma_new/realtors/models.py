@@ -20,6 +20,8 @@ class Realtor(models.Model):
 
     class Meta:
         ordering = ['title']
+        verbose_name = 'риелтор'
+        verbose_name_plural = 'риелторы'
 
 class Cottage(models.Model):
     rlt = models.ForeignKey(Realtor, on_delete=models.CASCADE)
@@ -35,4 +37,10 @@ class Cottage(models.Model):
 
     def __str__(self):
         return self.adress
+
+    class Meta:
+        verbose_name = 'коттедж'
+        verbose_name_plural = 'коттеджи'
+
+
 

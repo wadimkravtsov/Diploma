@@ -22,6 +22,8 @@ class Village(models.Model):
 
     class Meta:
         ordering = ['title']
+        verbose_name = 'посёлок'
+        verbose_name_plural = "посёлки"
 
 
 class Infrastructure(models.Model):
@@ -29,3 +31,7 @@ class Infrastructure(models.Model):
 
     def __str__(self):
         return self.name
+
+    class Meta:
+        verbose_name = 'инфраструктуру'
+        verbose_name_plural = 'инфраструктура'
