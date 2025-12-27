@@ -36,7 +36,15 @@
         <td>{{ cottage.floors }}</td>
         <td>{{ cottage.walls }}</td>
         <td>{{ cottage.bedrooms }}</td>
+
+        {% if cottage.web_site %}
+        <td>
+            <a href="{{ cottage.web_site }}" target="_blank">Avito</a>
+        </td>
+        {% else %}
         <td>{{ cottage.web_site }}</td>
+        {% endif %}
+
         <td>{{ cottage.price }}</td>
         {% if user.is_authenticated %}
         <td>

@@ -18,11 +18,11 @@
             <li><a href="{% url 'realtors' %}">Риэлторы</a></li>
 <!--            <li><a href="">Риэлторы +</a></li>-->
             {% if user.is_authenticated %}
-              <li class="use">Пользователь: {{ user.username }}</li>
-              <li><a href="">Выйти</a></li>
+              <li class="use"><a href="">Пользователь: {{ user.username }}</a></li>
+              <li><a href="{% url 'logout' %}">Выйти</a></li>
               {% else %}
-            <li><a href="">Войти</a></li>
-            <li><a href="">Регистрация</a></li>
+            <li><a href="{% url 'login' %}">Войти</a></li>
+            <li><a href="{% url 'register' %}">Регистрация</a></li>
               {% endif %}
 
           </ul>

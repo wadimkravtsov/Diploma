@@ -5,8 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6d33adf3-aae2-494a-8497-58ab826c046b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/second/diploma_new/users/signals.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/second/diploma_new/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/second/diploma_new/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/second/diploma_new/realtors/templates/realtors/one_realtor.html" beforeDir="false" afterPath="$PROJECT_DIR$/second/diploma_new/realtors/templates/realtors/one_realtor.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/second/diploma_new/users/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/second/diploma_new/users/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/second/diploma_new/users/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/second/diploma_new/users/apps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/second/diploma_new/users/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/second/diploma_new/users/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

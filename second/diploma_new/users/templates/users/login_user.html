@@ -1,0 +1,16 @@
+{% extends 'villages/base.html' %}
+
+{% block content %}
+
+<h1>Авторизуйтесь!</h1>
+
+<form action="{% url 'login' %}" method="post">
+    {% csrf_token %}
+    <input type="text" style="margin: 0 auto; margin-bottom: 30px" name="username"
+    placeholder="Username">
+    <input type="password" style="margin: 0 auto; margin-bottom: 30px" name="password"
+    placeholder="Password">
+    <input type="submit" style="margin: 0 auto" name="Login">
+</form>
+
+{% endblock %}
