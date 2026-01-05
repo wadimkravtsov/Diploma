@@ -5,7 +5,9 @@ from django.contrib.auth import logout, login, authenticate
 from django.contrib.auth.models import User
 from django.core.exceptions import ObjectDoesNotExist
 from django.contrib import messages
-from .forms import CustomUserCreationForm
+from .forms import CustomUserCreationForm, ProfileForm
+from django.contrib.auth.decorators import login_required
+
 
 # Create your views here.
 def login_user(request):
@@ -54,4 +56,30 @@ def register_user(request):
         'form': form
     }
     return render(request, "users/register_user.html", context)
+
+@login_required(login_url='login')
+def profile(request):
+    prof = request.user.profile
+    print(prof)
+    context = {
+        "profile": prof
+    }
+
+    return render(request, "users/profile.html", context)
+
+@login_required(login_url='login')
+def edit_profile(request):
+    profile = request.user.profile
+    form = ProfileForm(instance=profile)
+
+    if request.method == "POST":
+        form = ProfileForm(request.POST, request.FILES, instance=profile)
+        if form.is_valid():
+            form.save()
+            return redirect('profile')
+
+    context = {
+        'form': form
+    }
+    return render(request, 'users/profile_form.html', context)
 

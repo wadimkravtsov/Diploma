@@ -18,7 +18,7 @@
             <li><a href="{% url 'realtors' %}">Риэлторы</a></li>
 <!--            <li><a href="">Риэлторы +</a></li>-->
             {% if user.is_authenticated %}
-              <li class="use"><a href="">Пользователь: {{ user.username }}</a></li>
+              <li class="use"><a href="{% url 'profile' %}">Пользователь: {{ user.username }}</a></li>
               <li><a href="{% url 'logout' %}">Выйти</a></li>
               {% else %}
             <li><a href="{% url 'login' %}">Войти</a></li>
@@ -28,7 +28,19 @@
           </ul>
       </div>
     </div>
+    {% if messages %}
+{% for message in messages %}
+<div style="text-align: center">
+    <div class="alert alert--{{message.tags}}">
+        <p class="alert__message">{{message}}</p>
+        <button class="alert__close">⨯</button>
+    </div>
+</div>
+{% endfor %}
+{% endif %}
         {% block content %}
         {% endblock %}
+<script src="{% static 'uikit/app.js' %}"></script>
+<script src="{% static 'js/script.js' %}"></script>
 </body>
 </html>

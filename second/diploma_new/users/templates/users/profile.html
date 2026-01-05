@@ -1,0 +1,13 @@
+{% extends 'villages/base.html' %}
+
+{% block content %}
+
+<button style="background: yellow" class="btn-profile"><a href="{% url 'villages' %}">на главную</a></button>
+<button style="margin-right: 10px" class="btn-profile"><a href="{% url 'edit_profile' %}">редактировать</a></button>
+<h1>{{ profile.first_name }} {{ profile.last_name }}</h1>
+<img  style="display: block; margin: 0 auto" src="{{ profile.profile_image.url }}" />
+<p style="text-align: center; font-size: 25px; font-weight: bold">{{ profile.phone }}</p>
+<h1>Агентство недвижимости "{{ profile.realt }}"</h1>
+
+
+{% endblock %}

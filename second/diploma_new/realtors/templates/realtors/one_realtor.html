@@ -3,7 +3,7 @@
 {% block content %}
 <img class="image_card" src="{{ realtor.featured_image.url }}" alt="image_card">
 <h1>{{ realtor.title }} (price)</h1>
-{% if user.is_authenticated %}
+{% if numb == pk %}
 <button class="btn-up"><a href="{% url 'cottage' %}">добавить объект</a></button>
 {% endif %}
 <div class="tab">
@@ -19,7 +19,7 @@
         <th>количество спален</th>
         <th>Web-site</th>
         <th>цена</th>
-        {% if user.is_authenticated %}
+        {% if numb == pk %}
         <th></th>
         <th></th>
         {% endif %}
@@ -46,7 +46,7 @@
         {% endif %}
 
         <td>{{ cottage.price }}</td>
-        {% if user.is_authenticated %}
+        {% if numb == pk %}
         <td>
 <!--            Редактировать-->
             <a href="{% url 'update_cottage' cottage.id %}">Редактировать</a>

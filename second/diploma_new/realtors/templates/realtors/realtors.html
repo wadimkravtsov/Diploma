@@ -2,7 +2,7 @@
 
 {% block content %}
 <h1>Агентства недвижимости</h1>
-          <form  class="form1" action="{% url 'realtors' %}" method="get">
+          <form  id="search"  class="form1" action="{% url 'realtors' %}" method="get">
             <div class="form__field1">
               <input class="search_realtor"  type="text" name="search_realtor"
                 placeholder="Поиск по названию" value="{{ search_realtor }}"/>
@@ -32,18 +32,18 @@
 <div class="pagin">
     <ul>
         {% if realtors.has_previous %}
-        <li><a href="?page={{ realtors.previous_page_number }}" class="pbtn">&#10094;</a></li>
+        <li><a href="?page={{ realtors.previous_page_number }}" class="pbtn page-link" data-page="{{ realtors.previous_page_number }}">&#10094;</a></li>
         {% endif %}
         {% for page in pages_range %}
         {% if page == realtors.number %}
-        <li><a href="?page={{ page }}" class="pbtn-active">{{ page }}</a></li>
+        <li><a href="?page={{ page }}" class="pbtn-active page-link" data-page="{{ page }}">{{ page }}</a></li>
         {% else %}
-        <li><a href="?page={{ page }}" class="pbtn">{{ page }}</a></li>
+        <li><a href="?page={{ page }}" class="pbtn page-link" data-page="{{ page }}">{{ page }}</a></li>
         {% endif %}
         {% endfor %}
 
         {% if realtors.has_next %}
-        <li><a href="?page={{ realtors.next_page_number }}" class="pbtn">&#10095;</a></li>
+        <li><a href="?page={{ realtors.next_page_number }}" class="pbtn page-link" data-page="{{ realtors.next_page_number }}">&#10095;</a></li>
         {% endif %}
     </ul>
 </div>

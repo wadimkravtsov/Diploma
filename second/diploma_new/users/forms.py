@@ -14,3 +14,10 @@ class CustomUserCreationForm(UserCreationForm):
         model = User
         fields = ['first_name', 'last_name', 'email', 'username', 'password1', 'password2']
         labels = {'first_name': 'Name', 'last_name': 'Surname'}
+
+class ProfileForm(ModelForm):
+    class Meta:
+        model = Profile
+        fields = ['realt','first_name', 'last_name', 'email', 'username', 'phone', 'profile_image']
+        labels = {'realt': 'Агентство','first_name': 'Имя', 'last_name': 'Фамилия', 'email': 'Email', 'phone': 'телефон'}
+

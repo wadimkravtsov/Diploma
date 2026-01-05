@@ -355,7 +355,23 @@ input{
     
 }
 
+/* профиль пользователя */
 
+.btn-profile{
+    display: inline-block;
+    margin: 20px;
+    font-size: 22px;
+    font-weight: bold;
+    align-items: center;
+    border: 2px solid black;
+    box-sizing: border-box;
+
+
+}
+
+.profile-input{
+    margin-top: 30px;
+}
 
 
 

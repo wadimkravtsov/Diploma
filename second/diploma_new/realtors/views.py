@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from realtors.models import Realtor, Cottage
+from django.contrib.auth.models import User
 from .forms import CottageForm
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 
@@ -46,9 +47,18 @@ def realtors(request):
 def realtor(request, pk):
     realtor.obj = Realtor.objects.get(id=pk)
     cottages = Cottage.objects.filter(rlt=pk)
+    if request.user.is_authenticated:
+        numb = request.user.profile.realt.id
+    else:
+        numb = 0
+    print(numb)
+    print(pk)
+
     context = {
         'realtor': realtor.obj,
-        'cottages': cottages
+        'cottages': cottages,
+        'numb': int(numb),
+        'pk': int(pk)
     }
     print(cottages, pk)
     return render(request, 'realtors/one_realtor.html', context)
