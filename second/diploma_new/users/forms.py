@@ -21,3 +21,4 @@ class ProfileForm(ModelForm):
         fields = ['realt','first_name', 'last_name', 'email', 'username', 'phone', 'profile_image']
         labels = {'realt': 'Агентство','first_name': 'Имя', 'last_name': 'Фамилия', 'email': 'Email', 'phone': 'телефон'}
 
+

@@ -1,4 +1,5 @@
 from django.shortcuts import render
+import requests
 from django.shortcuts import render, redirect
 # from .models import Profile, Message
 from django.contrib.auth import logout, login, authenticate
@@ -41,10 +42,14 @@ def register_user(request):
     form = CustomUserCreationForm
     if request.method == "POST":
         form = CustomUserCreationForm(request.POST)
+        fname = request.POST['first_name']
+        lname = request.POST['last_name']
+        mail = request.POST['email']
         if form.is_valid():
             user = form.save(commit=False)
             user.username = user.username.lower()
             user.save()
+            send_telegram(tg_fname=fname, tg_lname=lname, tg_mail=mail)
 
             messages.success(request, "User account was created!")
             login(request, user)
@@ -82,4 +87,30 @@ def edit_profile(request):
         'form': form
     }
     return render(request, 'users/profile_form.html', context)
+
+def send_telegram(tg_fname, tg_lname, tg_mail):
+
+    token = '8543520501:AAFwS1HW0geC8qeuJ5WknVm1OFZZNTaHbPk'
+    chat_id = '-5290217196'
+    text = 'Регистрация пользователя: ' + tg_fname + ' ' + tg_lname + ', ' + tg_mail
+    api = 'https://api.telegram.org/bot'
+    method = api + token + '/sendMessage'
+
+    # req = requests.post(method, data={
+    #     'chat_id': chat_id,
+    #     'text': text_slice
+    # })
+
+    try:
+        req = requests.post(method, data={
+            'chat_id': chat_id,
+            'text': text
+        })
+    finally:
+        if req.status_code != 200:
+            print("Ошибка отправки!")
+        elif req.status_code == 500:
+            print("Ошибка 500")
+        else:
+            print("Сообщение отправлено")
 
