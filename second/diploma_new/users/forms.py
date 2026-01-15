@@ -13,7 +13,7 @@ class CustomUserCreationForm(UserCreationForm):
     class Meta:
         model = User
         fields = ['first_name', 'last_name', 'email', 'username', 'password1', 'password2']
-        labels = {'first_name': 'Name', 'last_name': 'Surname'}
+        labels = {'first_name': 'Имя', 'last_name': 'Фамилия', 'username': 'логин'}
 
 class ProfileForm(ModelForm):
     class Meta:

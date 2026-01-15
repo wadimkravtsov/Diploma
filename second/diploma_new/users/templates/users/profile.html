@@ -8,7 +8,8 @@
 <img  style="display: block; margin: 0 auto" src="{{ profile.profile_image.url }}" />
 <p style="text-align: center; font-size: 25px; font-weight: bold">tel: {{ profile.phone }}</p>
 <p style="text-align: center; font-size: 25px; color: grey">{{ profile.email }}</p>
+<a href="{% url 'realtor' profile.realt.id %}">
 <h1>Агентство недвижимости "{{ profile.realt }}"</h1>
-
+</a>
 
 {% endblock %}
