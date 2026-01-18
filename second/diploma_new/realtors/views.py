@@ -5,7 +5,6 @@ from .forms import CottageForm
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 
 
-
 def realtors(request):
     search_realtor = ""
     if request.GET.get('search_realtor'):
